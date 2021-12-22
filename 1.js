@@ -1,3 +1,6 @@
+/**
+ * babe插件使用
+ */
 // 把源代码转成抽象语法树
 let esprima = require('esprima');
 // 遍历语法树，修改树上的语法节点
