@@ -6,17 +6,9 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/gbb12138/3.webpack-ast.git"
-  },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/gbb12138/3.webpack-ast/issues"
-  },
-  "homepage": "https://github.com/gbb12138/3.webpack-ast#readme",
   "dependencies": {
     "escodegen": "^2.0.0",
     "esprima": "^4.0.1",
