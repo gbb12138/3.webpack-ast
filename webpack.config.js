@@ -15,12 +15,23 @@ module.exports = {
                     loader: 'babel-loader',  // lodash 按需加载
                     options: {
                         plugins:[
+                            // 使用babel-plugin-import实现按需加载
+                            // [
+                            //     "import",
+                            //     {
+                            //         // 指定要按需加载的模块
+                            //         "libraryName": "lodash",
+                            //         // 按需加载的目录，默认会找lib,为空是根目录
+                            //         "libraryDirectory": "",
+                            //     }
+                            // ]
+
+                            // 使用自定义插件实现按需加载
                             [
-                                "import",
+                                // 引入当前目录下的import.js
+                                path.resolve(__dirname, 'import.js'),
                                 {
-                                    // 指定要按需加载的模块
                                     "libraryName": "lodash",
-                                    // 按需加载的目录，默认会找lib,为空是根目录
                                     "libraryDirectory": "",
                                 }
                             ]
