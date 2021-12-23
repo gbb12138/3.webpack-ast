@@ -1,4 +1,5 @@
 const path = require('path');
+let HtmlWebpackPlugin = require('html-webpack-plugin')
 module.exports = {
     mode: 'development',
     entry: './src/index.js',
@@ -34,7 +35,11 @@ module.exports = {
                                     "libraryName": "lodash",
                                     "libraryDirectory": "",
                                 }
-                            ]
+                            ],
+                            // 自定义日志插件
+                            [
+                                path.resolve(__dirname, 'log.js')
+                            ],
                         ]
                     }
                 }
@@ -42,6 +47,9 @@ module.exports = {
         ]
     },
     plugins: [
-
+        new HtmlWebpackPlugin({
+            template: './src/index.html',
+            filename: 'index.html'
+        })
     ]
 }
